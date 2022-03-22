@@ -1,16 +1,41 @@
-<html>
-    <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <h1>Simple Interest Calculator</h1>
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
-
-        <button onclick="compute()">Compute</button>
-    </body>
+    <title>final project</title>
+</head>
+<body>
+    <div class="container">
+            <h1 >Simple Interest Calculator</h1>
+        <div class="select">
+            Amount <input  id="number">  <br/>
+            <div class="rate">
+                Rate <input type="range" min="1"  max="20" value="1" id="range" step="0.5" oninput="actualizarValue(value)"> 
+                <p id="val">1</p> <p>%</p>
+            </div>
+            
+            No. of Years <select name="years" id="years">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select> <br>
+            <button id="button"onclick="calculate()">Compute Interest</button>
+            <p id="result"></p>
+            
+        </div>
+        <h4>©️ Everyone can get rich</h4>
+    </div>
+</body>
 </html>
